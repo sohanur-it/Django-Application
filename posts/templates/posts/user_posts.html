@@ -1,0 +1,27 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+    <h1 class="mb-3">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }}) </h1>
+    {% for post in posts %}
+
+   <div class="card mb-4" style="margin-top:20px">
+            <img class="card-img-top" style="height: 300px;" src="{{ post.image.url }}" alt="Card image cap">
+        </a>
+        
+        <div class="card-body">
+            <h2 style="font-size: 50px"><a class="card-title" style="text-decoration: none;"  href="{% url 'post-detail' post.slug %}"> {{ post.title }} </a></h2>
+            <p class="card-text">{{ post.content |safe|truncatewords:"50"|linebreaks}} </p>
+            <a href="{% url 'post-detail' post.slug %}" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+            Posted on {{ post.date_posted }} by
+            <a href="#"> {{ post.author }} </a>
+              <img class='rounded-circle article-img' src="{{ post.author.profile.image.url }}" height="50px"
+            width="50px" alt="">
+        </div>
+    </div>
+
+    {% endfor %}
+
+{% endblock content %}
+

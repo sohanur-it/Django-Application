@@ -1,0 +1,187 @@
+{% load  static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Django Blog - Sohan </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'posts/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'posts/css/blog-home.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'index' %}">Django Blog - Sohan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'service' %}">Services</a>
+          </li>
+
+
+          {% if user.is_authenticated %}
+          <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+          <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+          <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
+          {% else %}
+
+          <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+          <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+
+          {% endif %}
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        {% if messages %}
+        {% for message in messages %}
+
+        <div class="alert alert-{{ message.tags }}">
+
+          {{ message }}
+
+        </div>
+
+        {% endfor %}
+
+        {% endif %}
+
+
+
+
+        {% block content %}
+        Replace Content here ///
+        {% endblock %}
+        
+
+        <!-- Pagination -->
+      </div>
+
+      
+
+
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header" style="text-align: center;">Current Logged User</h5>
+          <div class="card-body">
+
+
+
+
+            {% if user.username %}
+
+            <h2 style="text-align: center;">
+
+             <a href="{% url 'profile' %}" style="font-size: 30px;font-weight: bold;color:red;text-decoration: none"> {{ user.username }} </a>
+           </h2>    
+
+
+
+           {% else %}  
+           <h2 style="font-size: 30px;font-weight: bold;color:red;text-align: center;">  GUEST </h2>
+           {% endif %}
+
+
+
+           
+         </div>
+       </div>
+
+
+
+       <!-- Side Widget -->
+      <div class="card my-4">
+        <h5 class="card-header" style="text-align: center;">
+          CATAGORIES
+        </h5>
+        <div class="card-body">
+          <ul>
+            {% for category in categories %}
+            
+            <li style="list-style-type: square;display: inline;">
+              <a href="{% url 'category-posts' category.category %}">{{ category.category}}</a>
+            </li>
+
+            {% endfor %}
+
+          </ul>
+
+        </div>
+      </div>
+
+        <div class="card my-4">
+        <h5 class="card-header" style="text-align: center;">
+          Anything
+        </h5>
+        <div class="card-body">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ipsam animi officiis, debitis ut eligendi. Voluptate quidem ea sequi eveniet quo dolore vitae odit enim, excepturi delectus dicta amet aliquam.
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container" >
+    <p class="m-0 text-center text-white">Copyright &copy; Sohan Blog 2019</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'posts/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'posts/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+</body>
+
+</html>
