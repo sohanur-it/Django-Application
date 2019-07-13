@@ -13,7 +13,7 @@ Main Features :
 <li>User Profile Page with Update Feature</li>
 <li>Registration,login,logout Page</li>
 <li>Frondend and Backend Validation</li>
-<li>After Login, User can Create, Update and Delete Their Posts</li>
+<li>Classbased Listview, DetailView, CreateView, UpdateView, DeleteView </li>
 <li>After Login, User can update Their Profile Info Like (E-mail , Username and Profile Pictures) </li>
 <li>Number of Posts By a Specific User </li>
   <li>Number of Posts By a Specific Category  </li>
