@@ -101,21 +101,12 @@ Now go to<a href="http://127.0.0.1:8000/"><ul><li> http://127.0.0.1:8000/</li></
 <h2>ScreenShots</h2>
 
 <ol>
-  <li>Registration Page : </li><br>
-<img src="https://github.com/sohanur-it/Django-Blog/blob/master/src/screenshot/registration.png"><br><br>
-
+  <li>Home Page : </li><br>
+<img src="https://github.com/sohanur-it/Django-Application/blob/master/screenshot/home-dj.png"><br><br>
+ <li>Home-Desc Page : </li><br>
+<img src="https://github.com/sohanur-it/Django-Application/blob/master/screenshot/dj-descrip.png"><br><br>
   
- <li>Login Page : </li><br>
-<img src="https://github.com/sohanur-it/Django-Blog/blob/master/src/screenshot/login.png"><br><br>
-
- <li>Home Page : </li><br>
-<img src="https://github.com/sohanur-it/Django-Blog/blob/master/src/screenshot/home.png"><br><br>
-
- <li>Detail View of Post : </li><br>
-<img src="https://github.com/sohanur-it/Django-Blog/blob/master/src/screenshot/detail_view.png"><br><br>
  
- <li>Profile Update  Page : </li><br>
-<img src="https://github.com/sohanur-it/Django-Blog/blob/master/src/screenshot/profile.png"><br><br>
 
 </ol>
 
