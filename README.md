@@ -8,10 +8,10 @@ Main Features :
 <ul>
 <li>Blog Page Featured With Backend Dashboard</li>
   <li>Category Based Post with title,content and image </li>
-  <li>Automatic and unique Slug Generator for each post</li>
-   <li>slug based url for SEO Friendly</li>
+  <li>Automatic and Unique Slug Generator for each post</li>
+   <li>Slug Based URL For SEO Friendly</li>
 <li>User Profile Page with Update Feature</li>
-<li>Registration,login,logout Page</li>
+<li>Registration,Login,Logout Page</li>
 <li>Frondend and Backend Validation</li>
 <li>Classbased Listview, DetailView, CreateView, UpdateView, DeleteView </li>
 <li>After Login, User can update Their Profile Info Like (E-mail , Username and Profile Pictures) </li>
