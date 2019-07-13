@@ -8,6 +8,8 @@ Main Features :
 <ul>
 <li>Blog Page Featured With Backend Dashboard</li>
   <li>Category Based Post with title,content and image </li>
+  <li>Automatic and unique Slug Generator for each post</li>
+   <li>slug based url for SEO Friendly</li>
 <li>User Profile Page with Update Feature</li>
 <li>Registration,login,logout Page</li>
 <li>Frondend and Backend Validation</li>
@@ -23,7 +25,7 @@ Used Technolgies :
 </h2>
 <ul>
 <li>Python</li>
-<li>Django v2.2.1</li>
+<li>Django v2.2.3</li>
 <li>SQLite3</li>
 <li>HTML</li>
 <li>CSS</li>
