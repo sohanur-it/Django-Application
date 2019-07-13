@@ -74,7 +74,7 @@ clone the project in the dj directory.
 </h2>
 
 <div>
-git clone https://github.com/sohanur-it/Django-Application/
+git clone https://github.com/sohanur-it/Django-Application.git
 </div>
 
 <h2>Install requirements.txt
